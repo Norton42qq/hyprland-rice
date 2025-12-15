@@ -1,0 +1,95 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 42,
+    "spacing": 0,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/datetime"],
+    "modules-right": ["pulseaudio", "custom/ip", "cpu", "memory", "hyprland/language", "tray", "custom/power"],
+
+// left island
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "urgent": "󰀨",
+            "default": "󰑊"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "sort-by-number": true
+    },
+
+    // center island
+
+    "custom/datetime": {
+        "format": "  {}",
+        "exec": "date +'%H:%M  |  %d.%m.%Y'",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    // right island
+
+    "custom/ip": {
+        "format": "  {}",
+        "exec": "ip -4 addr show | grep -oP '(?<=inet\\s)\\d+(\\.\\d+){3}' | grep -v '127.0.0.1' | head -1",
+        "interval": 30,
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "󰂯 {icon} {volume}%",
+        "format-muted": "  Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "tooltip": false,
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "hyprland/language": {
+    	"format": "  {}",
+    	"format-en": "EN",
+    	"format-ru": "RU",
+    	"on-click": "hyprctl switchxkblayout gaming-keyboard next",
+    	"tooltip": false
+    },
+
+    "custom/power": {
+    	"format": "  ",
+    	"on-click": "~/.config/waybar/scripts/powermenu.sh",
+    	"tooltip": false
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 6,
+        "tooltip": false
+    }
+}
