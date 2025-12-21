@@ -1,6 +1,6 @@
 # My rice for Hyprland
  
- ## ![Logo Image](assets/screenshot.jpg)
+ ## ![Logo Image](assets/screenshot.png)
 
 ## -------------- INFO & REQUIREMENTS --------------
 
@@ -12,11 +12,12 @@
 - 🖥️Shell: zsh 5.9 (oh-my-zsh : theme gnzh)
 - 🌐Browser: Firefox
 - 📂File manager: dolphin
+- 📷Screenshot: Grim & Slurp 
 - Fonts: Font awesome & jetbrains mono
 
 ## -------------- INSTALL --------------
 ```bash
-pacman -S hyprland hyprpaper waybar wofi alacritty zsh firefox otf-font-awesome ttf-jetbrains-mono dolphin git nano
+pacman -S hyprland hyprpaper waybar wofi alacritty zsh firefox otf-font-awesome ttf-jetbrains-mono dolphin git nano slurp grim
 ```
 
 After installing the packages, run the bash script
