@@ -1,6 +1,6 @@
 # My rice for Hyprland
  
- ## ![Logo Image](assets/screenshot.png)
+ ## ![Logo Image](assets/screenshot.jpg)
 
 ## -------------- INFO & REQUIREMENTS --------------
 
