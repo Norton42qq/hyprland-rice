@@ -1,4 +1,5 @@
 # My rice for Hyprland
+
  
  ## ![Logo Image](assets/screenshot.jpg)
 
@@ -60,6 +61,6 @@ nano hyprland.conf
 nano hyprpaper.conf
 ```
 
-5. Change the empty parameter to "," to your monitor's ID. 
+5. Change parametr `monitor=` with your monitor ID.
 
 Once you have installed rice, it is advisable to reboot the hyprland session or the computer itself.
